@@ -1,0 +1,254 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  background: #F7F6F2;
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* LEFT WELCOME SECTION */
+
+.login-welcome {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #063154, #025F67);
+  color: #F7F6F2;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slideIn 0.8s ease both;
+}
+
+.login-welcome::before,
+.login-welcome::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-welcome::before {
+  width: 350px;
+  height: 350px;
+  background: rgba(47, 157, 148, 0.2);
+  top: 15%;
+  right: -130px;
+  animation: float 7s ease-in-out infinite;
+}
+
+.login-welcome::after {
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(247, 246, 242, 0.15);
+  bottom: -80px;
+  left: 15%;
+}
+
+.brand,
+.welcome-content,
+.welcome-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.brand h1 {
+  font-size: 38px;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  display: block;
+  color: #BCC5CC;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+.welcome-content {
+  max-width: 530px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+
+.welcome-content h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.welcome-content p {
+  color: #BCC5CC;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.welcome-footer {
+  color: #BCC5CC;
+  font-size: 13px;
+}
+
+/* RIGHT LOGIN SECTION */
+
+.login-section {
+  background: #F7F6F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  animation: fadeUp 0.9s ease both;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 430px;
+  padding: 45px 38px;
+  background: #FFFFFF;
+  border: 1px solid rgba(188, 197, 204, 0.5);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(6, 49, 84, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 65px rgba(6, 49, 84, 0.14);
+}
+
+.login-box h2 {
+  color: #063154;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.login-subtitle {
+  color: #71818C;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.login-box label {
+  display: block;
+  color: #063154;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 23px;
+  border: 1px solid #BCC5CC;
+  border-radius: 10px;
+  background: #F7F6F2;
+  color: #063154;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.login-box input:focus {
+  border-color: #2F9D94;
+  box-shadow: 0 0 0 4px rgba(47, 157, 148, 0.13);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(100deg, #025F67, #2F9D94);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #063154;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 95, 103, 0.2);
+}
+
+.login-note {
+  text-align: center;
+  font-size: 12px;
+  color: #71818C;
+  margin-top: 25px;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-22px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-welcome {
+    min-height: 300px;
+    padding: 35px 25px;
+  }
+
+  .welcome-content h2 {
+    font-size: 30px;
+  }
+
+  .login-section {
+    padding: 30px 18px;
+  }
+
+  .login-box {
+    padding: 32px 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
