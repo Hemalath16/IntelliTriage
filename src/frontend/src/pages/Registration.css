@@ -1,0 +1,283 @@
+
+.registration-page {
+  min-height: 100vh;
+  background: #EBF4F4;
+  color: #022D48;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding-bottom: 50px;
+}
+
+/* HEADER */
+.registration-header {
+  min-height: 82px;
+  padding: 18px 7%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 15px rgba(2, 45, 72, 0.06);
+}
+
+.registration-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #047D78;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.registration-header p {
+  font-size: 14px;
+  color: #526B79;
+}
+
+.registration-header p a {
+  color: #047D78;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* MAIN CONTAINER */
+.registration-container {
+  width: min(760px, 92%);
+  margin: 45px auto;
+  padding: 38px 45px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(2, 45, 72, 0.09);
+}
+
+/* HEADING */
+.registration-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.registration-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  border-radius: 18px;
+  background: #EBF4F4;
+  color: #047D78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-heading h1 {
+  font-size: 30px;
+  margin: 0 0 10px;
+  color: #022D48;
+}
+
+.registration-heading p {
+  color: #71838D;
+  font-size: 15px;
+}
+
+/* FORM */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.registration-form h3 {
+  font-size: 17px;
+  color: #047D78;
+  margin: 22px 0 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DCEAEA;
+}
+
+.registration-form label {
+  font-size: 14px;
+  font-weight: 650;
+  color: #022D48;
+  margin-top: 5px;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  height: 49px;
+  padding: 0 15px;
+  border: 1px solid #D5E3E5;
+  border-radius: 10px;
+  outline: none;
+  background: #FAFCFC;
+  color: #022D48;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  border-color: #047D78;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(4, 125, 120, 0.10);
+}
+
+.registration-form input::placeholder {
+  color: #9AAAB1;
+}
+
+/* TWO COLUMN ROW */
+.registration-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.registration-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* SUBMIT BUTTON */
+.registration-submit {
+  margin-top: 25px;
+  min-height: 53px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #022D48, #047D78);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(4, 125, 120, 0.22);
+}
+
+.registration-note {
+  text-align: center;
+  color: #84949B;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .registration-header {
+    padding: 16px 5%;
+  }
+
+  .registration-logo {
+    font-size: 19px;
+  }
+
+  .registration-header p {
+    font-size: 12px;
+  }
+
+  .registration-container {
+    padding: 28px 20px;
+    margin: 25px auto;
+  }
+
+  .registration-heading h1 {
+    font-size: 25px;
+  }
+
+  .registration-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .registration-page *,
+  .registration-page *::before,
+  .registration-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+/* LIVE CAMERA SECTION */
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  margin-top: 8px;
+  background: #EBF4F4;
+  border: 1px dashed #77C3B5;
+  border-radius: 16px;
+}
+
+.camera-preview,
+.captured-photo {
+  width: 100%;
+  max-width: 340px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #022D48;
+  border: 3px solid #77C3B5;
+}
+
+.camera-preview {
+  transform: scaleX(-1);
+}
+
+.camera-button {
+  min-width: 180px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #047D78;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.camera-button:hover {
+  background: #022D48;
+  transform: translateY(-2px);
+}
+
+.camera-error {
+  color: #C0392B;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .camera-preview,
+  .captured-photo {
+    height: 220px;
+  }
+}
+
+/* PASSWORD SUCCESS MESSAGE */
+.password-success {
+  color: #16803C;
+  background: #E8F5E9;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
