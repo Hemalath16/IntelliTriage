@@ -252,3 +252,96 @@
     transition: none !important;
   }
 }
+
+
+.login-box .password-toggle {
+  width: auto;
+  padding: 0;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  background: transparent;
+  color: #047D78;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  cursor: pointer;
+  transform: none;
+}
+
+.login-box .password-toggle:hover {
+  background: transparent;
+  color: #022D48;
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 22px;
+}
+
+.forgot-password a {
+  color: #047D78;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  color: #022D48;
+  text-decoration: underline;
+}
+
+
+
+/* Live Photo Camera Section */
+.login-camera {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-camera label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #063154;
+}
+
+.login-camera-preview,
+.login-captured-photo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #047D78;
+  margin: 12px auto;
+  background: #EBF4F4;
+}
+
+.login-box .camera-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 9px;
+  background: #047D78;
+  color: #FFFFFF;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box .camera-button:hover {
+  background: #022D48;
+}
+
+.camera-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 8px;
+}
